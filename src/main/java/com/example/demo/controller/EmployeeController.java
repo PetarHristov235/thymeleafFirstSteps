@@ -37,22 +37,11 @@ public class EmployeeController {
         model.addAttribute("employee", employee);
         return "employees/employee-form";
     }
-    //    @PostConstruct
-    //    private static List<Employee> employeesGenerator() {
-    //        Employee firstEmployee= new Employee(1,"Georgi","Georgiev", "georgiGeorgiev@gmail.com");
-    //        Employee secondEmployee= new Employee(2,"Emma","Emma", "emmaEmma@gmail.com");
-    //        Employee thirdEmployee= new Employee(3,"Tom","Novack", "tomNovack@gmail.com");
-    //        List<Employee>employees=new ArrayList<>();
-    //        employees.add(firstEmployee);
-    //        employees.add(secondEmployee);
-    //        employees.add(thirdEmployee);
-    //    return employees;
-    //    }
     @PostMapping("/save")
     public String saveEmployee(@ModelAttribute("employee") Employee employee){
         //save the employee
-        Employee employeeWithoutId=new Employee(employee.getFirstName(),employee.getLastName(),employee.getEmail());
-        employeeService.save(employeeWithoutId);
+//        Employee employeeWithoutId=new Employee(employee.getFirstName(),employee.getLastName(),employee.getEmail());
+        employeeService.save(employee);
 //        use a redirect to prevent duplicate submissions
         return "redirect:/employees/list";
     }

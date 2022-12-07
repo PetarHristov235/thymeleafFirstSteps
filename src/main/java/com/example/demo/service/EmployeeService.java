@@ -9,8 +9,8 @@ import java.util.List;
  * Date: 07.12.2022
  */
 public interface EmployeeService {
-    public List<Employee> findAll();
-    public Employee findById(int theId);
-    public void save(Employee employee);
-    public void deleteById(int id);
+     List<Employee> findAll();
+     Employee findById(int theId);
+     void save(Employee employee);
+     void deleteById(int id);
 }
