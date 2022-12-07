@@ -16,4 +16,5 @@ public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 
     //add a method to sort by last name
     public List<Employee> findAllByOrderByLastNameAsc();
+
 }

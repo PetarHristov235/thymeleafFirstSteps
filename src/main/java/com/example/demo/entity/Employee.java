@@ -33,19 +33,11 @@ public class Employee {
     public Employee(){}
 
     public Employee( final String firstName, final String lastName, final String email) {
-
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
     }
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(final int id) {
-        this.id = id;
-    }
 
     public String getFirstName() {
         return firstName;

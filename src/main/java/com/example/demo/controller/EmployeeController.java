@@ -51,7 +51,8 @@ public class EmployeeController {
     @PostMapping("/save")
     public String saveEmployee(@ModelAttribute("employee") Employee employee){
         //save the employee
-        employeeService.save(employee);
+        Employee employeeWithoutId=new Employee(employee.getFirstName(),employee.getLastName(),employee.getEmail());
+        employeeService.save(employeeWithoutId);
 //        use a redirect to prevent duplicate submissions
         return "redirect:/employees/list";
     }

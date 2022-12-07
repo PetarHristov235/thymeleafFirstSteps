@@ -33,7 +33,7 @@ public class EmployeeServiceImpl implements EmployeeService{
         employee=employeeOptional.get();
         }
         else{
-            throw new RuntimeException("Invoice with id: "+ id + " does not exist");
+            throw new RuntimeException("Employee with id: "+ id + " does not exist");
         }
         return employee;
     }
