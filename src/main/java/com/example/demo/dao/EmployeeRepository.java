@@ -14,6 +14,6 @@ import java.util.List;
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 
-    @Override
-    List<Employee> findAll();
+    //add a method to sort by last name
+    public List<Employee> findAllByOrderByLastNameAsc();
 }

@@ -20,7 +20,7 @@ import jakarta.persistence.Table;
 @Data
 public class Employee {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     private  Integer id;
     @Column(name="first_name")
@@ -32,8 +32,8 @@ public class Employee {
 
     public Employee(){}
 
-    public Employee(final Integer id, final String firstName, final String lastName, final String email) {
-        this.id = id;
+    public Employee( final String firstName, final String lastName, final String email) {
+
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
